@@ -1,0 +1,693 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dojokun {
+  width: 500px;
+  margin: 0 auto;
+}
+.dojokun img {
+  width: 500px;
+}
+
+p {
+  line-height: 1.6;
+  text-indent: 5px;
+}
+.title {
+  text-align: center;
+  margin: 40px;
+  color: #008eca;
+}
+.img1 a {
+  color: black;
+}
+.img1 a:hover {
+  color: #bf0b14;
+}
+.bushidoryu {
+  background-color: #333;
+  color: white;
+  width: 30%;
+  padding: 8px;
+}
+.bushidoryu p {
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* background da pagina*/
+html {
+  background-color: #dedbd5;
+}
+.main {
+  width: 1088px;
+  display: flex;
+  margin: 0 auto;
+}
+.video {
+  width: 320px;
+  margin: 0 16px;
+}
+.center {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* paginação links */
+.pagination {
+  display: inline-block;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+/* estilo ativo */
+.pagination a.active {
+  background-color: #333;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #bf0b14;
+}
+
+/*define propriedades do banner*/
+.banner {
+  height: 132px;
+}
+.banner img {
+  width: 100%;
+  height: 132px;
+}
+/*Fim do banner*/
+.fotos {
+  display: flex;
+  flex-wrap: nowrap;
+
+  margin: 0 auto;
+}
+.shihan {
+  width: 260px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: content-box;
+  margin: 0 auto;
+}
+.shihan img {
+  padding: 5px;
+  margin: 0 auto;
+}
+/*sticky navbar*/
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* estilo e propriedades da barra de navegção */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  padding: 14px 16px;
+  display: block;
+  text-decoration: none;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #bf0b14; /*#4caf50;*/
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+/*fim de estilo e propriedades da navegação*/
+
+/*nav responsiva*/
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* a classe responsiva é adicionada na topnav com Javascript quando o usuario clica no icone.Essa classe faz o topna ficar bom em telas pequenas(exibe os links verticalmente em vez de horizontalmente) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .box {
+    /* width: 80%;*/
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    opacity: 0.9;
+  }
+  .fotos {
+    margin: 0 auto;
+    height: auto;
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .shihan {
+    width: 70%;
+    height: 270px;
+
+    padding: 10px;
+    box-sizing: content-box;
+    margin: 0 auto;
+  }
+  .shihan img {
+    padding: 5px;
+    margin: 0 auto;
+  }
+}
+#dojokun {
+  line-height: 1.6;
+}
+
+/* estilo das box*/
+.box {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+.box h1 {
+  color: #008eca;
+}
+.box h2 {
+  color: #008eca;
+}
+.box p {
+  text-align: justify;
+  letter-spacing: normal;
+  word-spacing: 3px;
+}
+
+.box1,
+.box2,
+.box3 {
+  width: 70%;
+  height: 300px;
+  margin: 40px auto;
+  padding: 0;
+  box-sizing: content-box;
+  background-color: #333;
+  color: #f2f2f2;
+}
+
+span {
+  font-size: 14px;
+}
+/*propriedades do botão "+detatlhes"*/
+.btnbox {
+  border: none;
+
+  margin: 15px;
+  padding: 10px 24px;
+  font-size: 12px;
+  background-color: #bf0b14;
+  color: white;
+  transition-duration: all 0.4s;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+.btnbox a {
+  text-decoration: none;
+  color: white;
+}
+
+button span {
+  transition: 0.4s;
+  position: relative;
+  display: inline-block;
+}
+button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.4s;
+}
+button:hover span {
+  padding-right: 20px;
+}
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*Aside - "acesse também"*/
+aside {
+  padding-bottom: 100px;
+}
+aside hr {
+  width: 55%;
+  margin-left: 10px;
+  border-style: groove;
+}
+
+aside h1 {
+  bottom: 0;
+  margin-left: 10px;
+}
+.container {
+  width: 70%;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 0 20px;
+  padding: 5px 10px;
+}
+/*imagens do aside (container)*/
+.img1 {
+  width: auto;
+  padding: 5px;
+
+  box-sizing: border-box;
+}
+
+.img1 img {
+  margin: 0;
+
+  vertical-align: middle;
+}
+.img1 span {
+  margin-left: 8px;
+}
+.container span {
+  font-size: 16px;
+}
+/*configurações do rodape*/
+
+footer {
+  width: 100%;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  background-color: #bf0b14;
+  box-sizing: border-box;
+  color: white;
+}
+
+.img-footer {
+  background-color: #ddd;
+  opacity: 0.8;
+  border-radius: 50%;
+  margin: 50px auto;
+  width: 110px;
+  height: 110px;
+}
+.img-footer img {
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+}
+
+.foot {
+  /* width: max-content;*/
+  height: 200px;
+  padding: 30px;
+
+  box-sizing: border-box;
+  margin: 15px auto;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.6;
+
+  list-style: none;
+}
+.foot a {
+  text-decoration: none;
+  color: white;
+}
+.foot a:hover,
+.foot2 a:hover {
+  color: #333;
+}
+
+.foot2 {
+  height: 200px;
+  padding: 30px;
+  margin: 15px auto;
+
+  list-style: none;
+  text-align: right;
+  font-size: 17px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+.foot2 a {
+  text-decoration: none;
+  color: white;
+}
+.split {
+  display: none;
+}
+.dev {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.dev span a {
+  text-decoration: none;
+  color: white;
+}
+
+/*aside e container aside*/
+@media screen and (max-width: 600px) {
+  .bushidoryu {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    padding: 8px;
+  }
+  .bushidoryu p {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  .img1 {
+    width: auto;
+    padding: 5px;
+    display: flex;
+    box-sizing: border-box;
+  }
+  .container {
+    width: 70%;
+    box-sizing: border-box;
+  }
+  .container span {
+    margin-bottom: 20px;
+  }
+  hr {
+    width: 80%;
+  }
+  .fotos img {
+    width: 150px;
+    margin: 0 auto;
+  }
+  .main {
+    display: block;
+    width: 360px;
+    margin: 0 auto;
+  }
+  .video {
+    /*border: red solid 5px;*/
+    width: 320px;
+    margin: 0 16px;
+  }
+  .dojokun {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .dojokun img {
+    width: 300px;
+  }
+}
+/*fim de aside e container-aside*/
+
+/*main: box responsivas e seus buttons não mexer*/
+@media screen and (max-width: 600px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 70%;
+    height: auto;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: justify;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+  }
+
+  .btnbox {
+    width: 40%;
+    height: 40px;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 3px;
+    font-size: 14px;
+    background-color: #bf0b14;
+    color: white;
+    transition-duration: all 0.4s;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+  button span {
+    text-align: center;
+  }
+  button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.4s;
+  }
+  button:hover span {
+    padding-right: 14px;
+  }
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  button span {
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    display: inline-block;
+  }
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+/*fim das box responsivas e seus buttons*/
+
+/*footer responsivo*/
+@media screen and (max-width: 600px) {
+  footer {
+    width: 100%;
+    height: auto;
+    display: block;
+    bottom: 0;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .img-footer {
+    margin: 30px auto;
+    width: 110px;
+    height: 110px;
+  }
+  .img-footer img {
+    margin: 5px auto;
+    padding: 10px;
+  }
+
+  .foot {
+    text-align: left;
+    margin: 0 auto;
+    font-size: 17px;
+  }
+  .foot2 {
+    margin: 0 auto;
+    box-sizing: content-box;
+    text-align: left;
+
+    padding: 20px;
+    font-size: 17px;
+  }
+  .split {
+    display: block;
+    width: 80px;
+    color: #333;
+  }
+}
+/*banner responsivo e background image*/
+@media screen and (max-width: 600px) {
+  .banner {
+    border: none;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+  }
+  .banner img {
+    width: 100%;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .boas-vindas {
+    background: url(back2.jpg) no-repeat;
+
+    background-size: cover;
+    height: 300px;
+  }
+  .boas-vindas p {
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+
+    float: left;
+    margin-left: 10px;
+  }
+}
+/*box main responsivas*/
+@media screen and (min-width: 601px) {
+  .flex-container {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    width: 30%;
+    height: auto;
+    margin: 20px 20px;
+    padding: 20px;
+    box-sizing: content-box;
+    background-color: #333;
+    color: #f2f2f2;
+  }
+}
+/* Slideshow container galeria */
+.gallery-container {
+  width: 90%;
+  position: relative;
+  margin: 0 5%;
+  background: #333;
+  padding: 2px;
+}
+@media (min-width: 480px) {
+  .gallery-container {
+    width: 800px;
+    margin: 20px auto;
+  }
+}
+/*esconde as imagens por padrão */
+.mySlides {
+  display: none;
+}
+/* botões de proximo e anteior */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* posição do botão "proximo" */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.imgslide {
+  width: 100%;
+}
+
+/* numeração (1/8 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .numbertext {
+    top: 15px;
+  }
+}
+
+/* animação fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
